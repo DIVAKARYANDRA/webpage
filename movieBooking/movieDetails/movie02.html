@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./movies.css">
+    <title>Movie Details</title>
+</head>
+<body>
+
+    <div class="movieDetailsContainer">
+
+        <div class="movieBanner">
+            <img src="../../images/movies/movieBanner2.jpg" alt="Movie Banner 02">
+            <h2>SALAAR</h2>
+            <button class="trailer-btn"><a href="https://youtu.be/JlG4TOVZEHI?si=A1a5kOo7J5cseeRG">▶Trailer</a></button>
+        </div>
+
+        <div class="movie-description">
+            <ul>
+                <li>2h 55m</li>
+                <li>Action, Crime, Drama</li>
+                <li>22 Dec 2023</li>
+            </ul>
+            <p>The fate of a violently contested kingdom hangs on the fraught bond between two friends-foes in this saga of power, blooodshed and betrayal.</p>
+
+            <button id="like-button" class="like-btn" onclick="toggleLike()">👍</button>
+            <span id="like-count">420k</span>
+        </div>
+
+        <h2>Cast</h2>
+
+        <div class="cast-members">
+            
+            <div class="cast-member">
+                <img src="../../images/movies/movie02cast00.jpeg" alt="Actor 1">
+                <p>Hero</p>
+            </div>
+
+            <div class="cast-member">
+                <img src="../../images/movies/movie02cast01.jpg" alt="Actor 1">
+                <p>Heroine</p>
+            </div>
+
+            <div class="cast-member">
+                <img src="../../images/movies/movie02cast02.jpg" alt="Actor 2">
+                <p>Friend</p>
+            </div>
+
+            <div class="cast-member">
+                <img src="../../images/movies/movie02cast03.jpg" alt="Actor 3">
+                <p>villan</p>
+            </div>
+            
+        </div>
+
+        <h2>Crew</h2>
+
+        <div class="crew-members">
+            <div class="crew-member">
+                <img src="../../images/movies/movie02crew00.jpg" alt="crew 1">
+                <p>Director</p>
+            </div>
+
+            <div class="crew-member">
+                <img src="../../images/movies/movie02crew01.jpg" alt="crew 2">
+                <p>Producer</p>
+            </div>
+            
+        </div>
+
+
+        <div class="booking">
+            <button class="book-btn"><a href="../selectSeat.html">Book Tickets</a></button>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        let likeCount = 420000;
+        let isLiked = false;
+
+        function toggleLike() {
+            if (isLiked) {
+                likeCount--;
+            } else {
+                likeCount++;
+            }
+            isLiked = !isLiked;
+            updateLikeCount();
+        }
+
+        function updateLikeCount() {
+            document.getElementById('like-count').innerText = likeCount;
+        }
+
+    </script>
+
+    
+</body>
+</html>

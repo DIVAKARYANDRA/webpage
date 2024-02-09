@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./selectSeat.css">
+    <title>Book Movies</title>
+</head>
+<body>
+
+    <div class="choices">
+        <div class="theatre-container">
+            <label>Choose Theatre</label>
+            <select id="theatre-choices">
+                <option>AMB Cinemas (Gachibowli)</option>
+                <option>PVR Preston (Gachibowli)</option>
+                <option>Sandhya 70mm (Chikkadapally)</option>
+                <option>Santhi Theatre (Narayanaguda)</option>
+                <option>PVR Cinemas (Inorbit Mall)</option>
+                <option>Rajadhani 70mm (Dilsukh Nagar)</option>
+            </select>
+        </div>
+    
+        <div class="movie-container">
+            <label>Pick a Movie</label>
+            <select id="movie-choices">
+                <option value="450">EAGLE (450)</option>
+                <option value="350">HANUMAN (350)</option>
+                <option value="250">SALAAR (250)</option>
+                <option value="150">MANGALVAAR (150)</option>
+                <option value="250">AQUAMAN (250)</option>
+                <option value="180">FIGHTER (180)</option>
+                <option value="280">CAPTAIN MILLER (280)</option>
+                <option value="150">SPIDERMAN (150)</option>
+                <option value="160">TITANIC (160)</option>
+                <option value="230">12th FAIL (230)</option>
+            </select>
+        </div>
+    </div>
+
+    <ul class="showcase">
+        <li>
+            <div class="seat">
+                <small>N/A</small>
+            </div>
+        </li>
+        <li>
+            <div class="seat selected">
+                <small>selected</small>
+            </div>
+        </li>
+        <li>
+            <div class="seat occupied">
+                <small>occupied</small>
+            </div>
+        </li>
+    </ul>
+
+    <div class="screen-container">
+        <div class="screen">
+
+        </div>
+
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat  occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+        </div>
+    </div>
+
+    <p class="message-text">You have selected <span id="count">0</span> seats for a price of Rs. <span id="total">0</span></p>
+
+
+
+
+    <script src="./selectSeat.js"></script>
+</body>
+</html>

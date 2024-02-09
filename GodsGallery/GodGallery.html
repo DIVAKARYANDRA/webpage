@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <title>Project</title>
+</head>
+<body>
+
+    <div class="container loading-container">
+
+    <div class="search">
+        <input type="text" class="input" placeholder="Search...">
+        <button class="search-btn">
+            <i class="ri-search-line"></i>
+        </button>
+    </div>
+
+    <div class="nav-container">
+        <nav class="active-nav" id="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Songs</a></li>
+                <li><a href="#">Works</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+    
+            <button class="icon" id="toggle">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+            </button>
+        </nav>
+    </div>
+
+    <div class="automatictext-container">
+        <h1 id="text"></h1>
+    </div>
+
+
+    <div class="container1">
+
+        <div class="panel active" style="background-image: url('../images/expanding-cards/Ram-mandir.jpg') ;">
+        </div>
+
+        <div class="panel" style="background-image: url('../images/expanding-cards/Kedarnath.jpg') ;">
+        </div>
+
+        <div class="panel" style="background-image: url('../images/expanding-cards/vijayawada.jpg') ;">
+        </div>
+
+        <div class="panel" style="background-image: url('../images/expanding-cards/tirupathi.jpg') ;">
+        </div>
+
+        <div class="panel" style="background-image: url('../images/expanding-cards/badrinath.jpg') ;">
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="circle activeProgress">1</div>
+            <div class="circle">2</div>
+            <div class="circle">3</div>
+            <div class="circle">4</div>
+            <div class="circle">5</div>
+        </div>
+
+        <button class="btn" id="prev" disabled>Prev</button>
+        <button class="btn" id="next">Next</button>
+    </div>
+
+    <div class="container3">
+        <div class="box"><img src="../images/scroll-images/image.jpg" alt="God-1"></div>
+        <div class="box"><img src="../images/scroll-images/image1.jpg" alt="God-2"></div>
+        <div class="box"><img src="../images/scroll-images/image2.jpeg" alt="God-3"></div>
+        <div class="box"><img src="../images/scroll-images/image3.jpg" alt="God-4"></div>
+        <div class="box"><img src="../images/scroll-images/image4.jpg" alt="God-5"></div>
+        <div class="box"><img src="../images/scroll-images/image5.jpg" alt="God-6"></div>
+        <div class="box"><img src="../images/scroll-images/image6.jpg" alt="God-7"></div>
+        <div class="box"><img src="../images/scroll-images/image7.jpeg" alt="God-8"></div>
+        <div class="box"><img src="../images/scroll-images/image8.jpg" alt="God-9"></div>
+    </div>
+
+    <div class="container4">
+
+        <audio src="../audios/God-songs/OmNamaShivaya.mp3" id="om"></audio>
+        <audio src="../audios/God-songs/Hanuman.mp3" id="hanuman"></audio>
+        <audio src="../audios/God-songs/ShivThandav.mp3" id="shiva"></audio>
+        <audio src="../audios/God-songs/shakthihai-BhakthiHai.mp3" id="bhakthi"></audio>
+        <audio src="../audios/God-songs/Raghu-nandan.mp3" id="raghuNandan"></audio>
+
+        <div id="sound-buttons"></div>
+
+    </div>
+
+    <div class="container5">
+
+        <h3>Enter some God names seperated by comma(,) <br> Press enter Key to pick a random God name from your list.</h3>
+
+        <textarea id="textarea" placeholder="Enter your choices here..."></textarea>
+
+        <div id="choiceTags">
+        </div>
+
+    </div>
+
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="image-container" id="imgs">
+              <img src="../images/carosuel-images/image1.png"
+             alt="first-image"
+             />
+          <img
+             src="../images/carosuel-images/image2.jpg"
+             alt="second-image"
+             />
+          <img
+             src="../images/carosuel-images/image3.jpg"
+             alt="third-image"
+             />
+          <img
+             src="../images/carosuel-images/image4.jpg"
+             alt="fourth-image"
+             />
+            </div>
+      
+            <div class="buttons-container">
+              <button id="left" class="btn1">Prev</button>
+              <button id="right" class="btn1">Next</button>
+            </div>
+          </div>
+    </div>
+
+    <div class="container5">
+        <div class="hoverboard-container" id="hoverboard">
+        </div>
+    </div>
+
+    <div class="container6">
+        <button id="magicBtn" class="magicBtn">Take Blessings 🙌</button>
+        <div id="bless-boxes" class="bless-boxes bigboxes"></div>
+    </div>
+
+    <div class="container7">
+        <div class="quiz-container" id="quiz">
+            <div class="quiz-header">
+                <h2 id="question" class="h2element">Question text</h2>
+                <ul>
+                    <li>
+                        <input type="radio" name="answer" id="a" class="answer">
+                        <label for="a" id="a_text">Question</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="answer" id="b" class="answer">
+                        <label for="b" id="b_text">Question</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="answer" id="c" class="answer">
+                        <label for="c" id="c_text">Question</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="answer" id="d" class="answer">
+                        <label for="d" id="d_text">Question</label>
+                    </li>
+                </ul>
+            </div>
+            <button id="submitquiz">Submit</button>
+        </div>
+    </div>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <div class="loading-text">0%</div>
+    
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

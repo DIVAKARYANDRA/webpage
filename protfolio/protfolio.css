@@ -1,0 +1,1112 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.hamburger-menu{
+    width: 35px;
+    height: 30px;
+    position: fixed;
+    top: 40px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.line{
+    width: 35px;
+    height: 5px;
+    background-color: aqua;
+    border-radius: 25px;
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+.line-2{
+    height: 3px;
+}
+
+.change .line-1{
+    transform: rotateZ(-45deg);
+}
+
+.change .line-2{
+    display: none;
+}
+
+.change .line-3{
+    transform: rotateZ(45deg);
+}
+
+.top-nav{
+    height: 15vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('../images/protfolio/menu-image.jpg') no-repeat 50% 0;
+    background-size: cover;
+    position: fixed;
+    top: -15vh;
+    transition: top 0.4s;
+}
+
+.change .top-nav{
+    top: 0;
+}
+
+.nav-list{
+    list-style: none;
+    width: 80%;
+    margin: auto;
+    height: inherit;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-list li{
+    perspective: 500px;
+}
+
+.nav-link{
+    text-decoration: none;
+    font-size: 30x;
+    text-transform: uppercase;
+    color: #ccc;
+    background-color: black;
+    letter-spacing: 1px;
+    padding: 10px;
+    display: block;
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: top;
+    transition: transform 0.3s;
+}
+
+.nav-link:hover{
+    transform: rotateX(90deg);
+}
+
+.nav-link::after{
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    background-color: black;
+    padding: inherit;
+    color: skyblue;
+    transform: rotateX(-91deg);
+    transform-origin: top;
+}
+
+.bottom-nav{
+    width: 100%;
+    height: 85vh;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('../images/protfolio/menu-image.jpg') no-repeat 50% -15vh;
+    background-size: cover;
+    position: fixed;
+    bottom: -85vh;
+    transition: bottom 0.4s;
+}
+
+
+.change .bottom-nav{
+    bottom: 0;
+}
+
+
+.menu-icons{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    list-style: none;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.icon-item{
+    perspective: 1000px;
+}
+
+.icon-link{
+    width: 200px;
+    height: 200px;
+    border: 8px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.icon-link:hover{
+    transform: rotateY(35deg);
+}
+
+.icon-link::before{
+    content: '';
+    height: 25px;
+    width: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+}
+
+
+.icon-link::after{
+    content: '';
+    height: 25px;
+    width: 5px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+
+.icon-link i{
+    color: white;
+    font-size: 60px;
+    width: 150px;
+    height: 150px;
+    background-color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    text-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    position: relative;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+.icon-link:hover i{
+    transform: rotateY(-70deg);
+    text-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+}
+
+.icon-link i::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -130%;
+    right: -130%;
+    border-radius: 100%;
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+.icon-item:nth-child(1) .icon-link i::after{
+    background-color: #3d5999;
+}
+
+
+.icon-item:nth-child(2) .icon-link i::after{
+    background-color: #d6249f;
+}
+
+.icon-item:nth-child(3) .icon-link i::after{
+    background-color: #0A66C2;
+}
+
+.icon-item:nth-child(4) .icon-link i::after{
+    background-color: #55acee;
+}
+
+.icon-link:hover i::after{
+    top: 0;
+    right: 0;
+    border-radius: 0;
+}
+
+.container1{
+    width: 100vw;
+    height: 100vh;
+    perspective: 800px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/protfolio/diva2.png') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.8;
+    z-index: -1; 
+}
+
+.cube {
+    position: absolute;
+    top: 35%;
+    left: 70%;
+    width: 30vw;
+    height: 30vw;
+    max-width: 200px;
+    max-height: 200px;
+    transform-style: preserve-3d;
+    transform: rotateX(45deg) rotateY(45deg);
+    animation: rotate 25s infinite linear;
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    background-size: cover;
+}
+
+.face img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.front { transform: translateZ(100px); }
+.back { transform: rotateY(180deg) translateZ(100px); }
+.left { transform: rotateY(-90deg) translateZ(100px); }
+.right { transform: rotateY(90deg) translateZ(100px); }
+
+.cube:hover {
+    animation-play-state: paused;
+}
+
+
+@keyframes rotate {
+    from { transform: rotateX(0) rotateY(0); }
+    to { transform: rotateY(360deg); }
+}
+
+.taglines{
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.taglines h1{
+    color: #18eb2a;
+    font-size: 50px;
+    /* -webkit-text-stroke: 1px #FFD700; */
+}
+
+.taglines h2{
+    font-size: 33px;
+    color: #e910b3;
+    /* -webkit-text-stroke: 1px rgb(32, 247, 67); */
+}
+
+
+.taglines h4{
+    font-size: 30px;
+    color: #1132ec;
+    -webkit-text-stroke: 1px rgb(29, 60, 238);
+}
+
+
+.container2{
+    width: 100vw;
+    height: 500px;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)), url(../images/protfolio/about-bg.jpg) no-repeat;
+    position: relative;
+}
+
+.triangle-container {
+    position: relative;
+    top: 30%;
+    left: 10%;
+    width: 0;
+    height: 0;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    border-bottom: 200px solid #1c28d1; 
+}
+
+.triangle-image {
+    position: absolute;
+    top: 55.5%;
+    left: 40%;
+    transform: translate(-40%, -55.5%);
+    width: 400px; 
+    height: 450px; 
+}
+
+.container2 h2{
+    position: absolute;
+    top: 5%; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    color: #d6249f;
+}
+
+.about-content{
+    position: absolute;
+    top: 25%;
+    right: 10%;
+    width: 500px;
+    color: cadetblue;
+}
+
+.about-content p{
+    width: 80%;
+    font-size: 20px;
+}
+
+.about-data{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 15px;
+    margin: 20px 0 20px 0;
+    color: #07e3f3;
+}
+
+.about-number{
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+.about-btn{
+    background-color: #55acee;
+    color: #d6249f;
+    font-size: 18px;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+.about-btn:hover{
+    background-color: black;
+}
+
+.container3{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)), url(../images/protfolio/3d-background.jpg) no-repeat;
+    background-size: cover;
+}
+
+.cube-cut{
+    width: 42vw;
+    height: 21vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    perspective: 1300px;
+
+}
+
+.cube-cut::after{
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 20%;
+    background-color: black;
+    z-index: -1;
+    top: 140%;
+    left: -10%;
+    filter: blur(80px);
+}
+
+.cuttedcube{
+    width: 100%;
+    height: 33.333333%;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.cuttedcube1{
+    transition: transform 0.4s;
+}
+
+.cuttedcube2
+{
+    z-index: 10;
+    transition: transform 0.4s 0.2s;
+}
+
+.cuttedcube3{
+    transition: transform 0.4s 0.4s;
+}
+
+
+.cutface{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+
+}
+
+.cutFront{
+    transform: translateZ(21vw);
+
+}
+
+.cuttedcube1 .cutFront{
+    background: url(../images/protfolio/diva4.png) no-repeat 50% 0;
+    background-size: cover
+}
+
+.cuttedcube2 .cutFront{
+    background: url(../images/protfolio/diva4.png) no-repeat 50% -7vw;
+    background-size: cover
+}
+
+.cuttedcube3 .cutFront{
+    background: url(../images/protfolio/diva4.png) no-repeat 50% -14vw;
+    background-size: cover
+}
+
+.cutBack{
+    transform: translateZ(-21vw) rotateY(180deg);
+}
+
+.cuttedcube1 .cutBack{
+    background: url(../images/protfolio/diva5.png) no-repeat 50% 0;
+    background-size: cover
+}
+
+.cuttedcube2 .cutBack{
+    background: url(../images/protfolio/diva5.png) no-repeat 50% -7vw;
+    background-size: cover
+}
+
+.cuttedcube3 .cutBack{
+    background: url(../images/protfolio/diva5.png) no-repeat 50% -14vw;
+    background-size: cover
+}
+
+
+.cutLeft{
+    transform: translateX(-21vw) rotateY(-90deg);
+}
+
+
+.cuttedcube1 .cutLeft{
+    background: url(../images/protfolio/face3.png) no-repeat 50% 0;
+    background-size: cover
+}
+
+.cuttedcube2 .cutLeft{
+    background: url(../images/protfolio/face3.png) no-repeat 50% -7vw;
+    background-size: cover
+}
+
+.cuttedcube3 .cutLeft{
+    background: url(../images/protfolio/face3.png) no-repeat 50% -14vw;
+    background-size: cover
+}
+
+
+.cutRight{
+    transform: translateX(21vw) rotateY(90deg);
+}
+
+.cuttedcube1 .cutRight{
+    background: url(../images/protfolio/diva1.png) no-repeat 50% 0;
+    background-size: cover
+}
+
+.cuttedcube2 .cutRight{
+    background: url(../images/protfolio/diva1.png) no-repeat 50% -7vw;
+    background-size: cover
+}
+
+.cuttedcube3 .cutRight{
+    background: url(../images/protfolio/diva1.png) no-repeat 50% -14vw;
+    background-size: cover
+}
+
+.cutTop{
+    height: 42vw;
+    background-color: #111;
+    transform: translateY(-21vw) rotateX(90deg);
+}
+
+
+.cutBottom{
+    height: 42vw;
+    background-color: #111;
+    transform: translateY(-14vw) rotateX(-90deg);
+}
+
+.cutcube-control{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    background-color: rgba(59,52,50,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: white;
+    cursor: pointer;
+    z-index: 100;
+    transition: background-color 0.3s;
+}
+
+.cutcube-control:hover{
+    background-color: rgba(42,38,36,0.8);
+}
+
+.cutcube-control i{
+    pointer-events: none;
+}
+
+.cutcubeLeftarrow{
+    top: 50%;
+    left: -35%;
+}
+
+
+.cutcubeRightarrow{
+    top: 50%;
+    left: 135%;
+}
+
+.cutCubePlayPause{
+    top: 140%;
+    left: 120%;
+}
+
+.container4{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)), url(../images/protfolio/friends-bg.jpg) center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.team-hd{
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+.team-hd::after{
+    content: '';
+    width: 5px;
+    height: 50px;
+    background-color: #fff;
+    position: absolute;
+    animation: blinkingText 1s 3s infinite;
+}
+
+@keyframes blinkingText {
+    0%{background-color: #fff;}
+    50%{background-color: transparent;}
+    100%{background-color: #fff;}
+}
+
+.teamCard{
+    width: 280px;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: transform 0.5s;
+}
+
+.teamCard:hover{
+    transform: scale(1.1);
+}
+
+.teamCardsWrapper{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.teamImageTop{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    -webkit-clip-path: polygon(0 0,100% 0,100% 73%,0% 100%);
+    clip-path: polygon(0 0,100% 0,100% 73%,0% 100%);
+}
+
+.teamProfileImage{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -110px;
+    z-index: 10;
+    border: 10px solid #eee;
+}
+
+@keyframes friendsCardAnim {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.teamCard:nth-child(1){
+    animation: friendsCardAnim 2s 3s backwards;
+}
+.teamCard:nth-child(2){
+    animation: friendsCardAnim 2s 3.5s backwards;
+}
+.teamCard:nth-child(3){
+    animation: friendsCardAnim 2s 4s backwards;
+}
+
+.teamCard h1{
+    font-size: 20px;
+    color: #555;
+    margin: 10px;
+}
+
+.teamSubtitle{
+    color: #777;
+    font-weight: 300;
+}
+
+.teamDescription{
+    font-size: 14px;
+    width: 90%;
+    margin: 15px 0;
+    font-style: italic;
+    color: #444;
+    text-align: center;
+}
+
+.teamCard button{
+    width: 120px;
+    padding: 7px;
+    margin: 5px 0;
+    background-color: tomato;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    color: #eee;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+}
+
+.teamCard:hover button{
+    animation: buttonRotation 2s 1s linear;
+}
+
+
+@keyframes buttonRotation {
+    0%{transform: scale(1) rotateZ(0)}
+    5%{transform: scale(1.2) rotateZ(5deg)}
+    10%{transform: scale(1.2) rotateZ(-5deg)}
+    15%{transform: scale(1.2) rotateZ(5deg)}
+    20%{transform: scale(1.2) rotateZ(-5deg)}
+    25%{transform: scale(1.2) rotateZ(5deg)}
+    30%{transform: scale(1.2) rotateZ(-5deg)}
+    35%{transform: scale(1.2) rotateZ(5deg)}
+    40%{transform: scale(1.2) rotateZ(-5deg)}
+    45%{transform: scale(1.2) rotateZ(5deg)}
+    50%{transform: scale(1.2) rotateZ(-5deg)}
+    55%{transform: scale(1.2) rotateZ(5deg)}
+    60%{transform: scale(1.2) rotateZ(-5deg)}
+    65%{transform: scale(1.2) rotateZ(5deg)}
+    70%{transform: scale(1.2) rotateZ(-5deg)}
+    75%{transform: scale(1.2) rotateZ(5deg)}
+    80%{transform: scale(1.2) rotateZ(-5deg)}
+    85%{transform: scale(1.2) rotateZ(5deg)}
+    90%{transform: scale(1.2) rotateZ(-5deg)}
+    95%{transform: scale(1.2) rotateZ(5deg)}
+    100%{transform: scale(1) rotateZ(0)}
+}
+
+.teamSocial-icons {
+    width: 150px;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0 20px 0;
+    border-top: 1px solid #999;
+    padding-top: 5px;
+}
+ 
+.teamSocial-icons i{
+    font-size: 18px;
+}
+
+.ri-whatsapp-fill{
+    color: rgb(13, 241, 13);
+}
+
+.ri-mail-fil{
+    color: white;
+}
+
+.ri-phone-fill{
+    color: black;
+}
+
+.container5{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)), url(../images/protfolio/about-bg.jpg) no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.websites,
+.games{
+    background-color: #173514;
+    width: 80%;
+    height: 40%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  
+}
+
+.website,
+.game{
+    margin: 10px;
+    background-color: rgb(155, 119, 51);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.website a,
+.game a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* media-screens */
+
+@media(max-width: 1130px){
+     .team-hd{
+        width: 80%;
+    }
+
+    .teamCardsWrapper{
+        width: 100%;
+        top: 30%;
+    }
+
+    .teamImageTop{
+        height: 190px;
+    } 
+
+    .menu-icons{
+        width: 90%;
+    }
+
+    .top-nav{
+        background: black;
+    }
+
+    .nav-list{
+        justify-content: center;
+    }
+    
+    .nav-link{
+        font-size: 20px;
+    }
+
+    .container2{
+        height: 100vh;
+    }
+
+    .container2 h2{
+        font-size: 60px;
+    }
+
+    .about-content {
+        position: relative; /* Reset position for about-content */
+        text-align: center; /* Center align text */
+        width: 80%;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%,-60%);
+    }
+    
+    .triangle-container {
+        position: relative; /* Reset position */
+        text-align: center; /* Center align */
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%,-30%);
+    }
+
+    .about-content p{
+        font-size: 30px;
+    }
+
+    .about-number{
+        font-size: 40px;
+        margin-top: 20px;
+    }
+
+    .about-btn{
+        width: 250px;
+        font-size: 25px;
+        position: relative;
+        left: -7%;
+        margin-top: 40px;
+    }
+
+    
+
+}
+
+
+@media(max-width: 950px){
+
+    .container1::before{
+        background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('../images/protfolio/diva6.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    .container4{
+        height: 100%;
+    }
+
+    .team-hd{
+       width: 90%;
+       top: 5%;
+   }
+
+   .teamCardsWrapper{
+      flex-wrap: wrap;
+      padding: 300px 0 200px 0;
+      top: 20%;
+   }
+
+   .teamCard{
+    margin: 0 30px 50px 30px;
+   }
+
+   .menu-icons{
+    width: 60%;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    }
+
+    .icon-link{
+        width: 180px;
+        height: 180px;
+        margin: 20px;
+    }
+
+    .icon-link i{
+        width: 130px;
+        height: 130px;
+        font-size: 40px;
+    }
+
+    .taglines h1 {
+        font-size: 35px;
+    }
+
+    .taglines h2 {
+        font-size: 28px;
+    }
+
+    .taglines h4 {
+        font-size: 20px;
+    }
+
+   
+}
+
+
+@media(max-width:850px){
+
+    .top-nav{
+        height: 25vh;
+        top: -25vh;
+    }
+
+    .bottom-nav{
+        height: 75vh;
+        bottom: -75vh;
+    }
+
+    .nav-list{
+        width: 70%;
+        flex-wrap: wrap;
+        align-content: center;
+
+    }
+
+    .nav-link{
+        margin: 3px 0;
+    }
+
+    .menu-icons{
+        width: 95%;
+        }
+    
+        .icon-link{
+            width: 140px;
+            height: 140px;
+        }
+    
+        .icon-link i{
+            width: 90px;
+            height: 90px;
+            font-size: 30px;
+        }
+
+}
+
+@media (max-width: 750px) {
+    .cube {
+        width: 50vw;
+        height: 50vw;
+        top: 50%;
+        left: 35%;
+        transform: translate(-50%,-35%);
+    }
+
+    .taglines h1 {
+        font-size: 45px;
+    }
+
+    .taglines h2 {
+        font-size: 27px;
+    }
+
+    .taglines h4 {
+        font-size: 23px;
+    }
+
+    .about-content {
+        width: 80%;
+        top: 55%;
+        left: 60%;
+        transform: translate(-55%,-60%);
+    }
+
+    .about-content p{
+        font-size: 20px;
+    }
+
+    .about-number{
+        font-size: 30px;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .hamburger-menu{
+        width: 25px;
+        height: 20px;
+    }
+    
+    .line{
+        width: 25px;
+        height: 5px;
+        border-radius: 15px;
+    }
+
+    .about-number{
+        font-size: 25px;
+    }
+
+    .about-subtitle{
+        font-size: 23px;
+    }
+
+
+    .nav-list{
+        width: 60%;
+    }
+
+    .icon-link{
+        width: 80px;
+        height: 80px;
+    }
+
+    .icon-link i{
+        width: 40px;
+        height: 40px;
+    }
+
+    .top-nav{
+        height: 35vh;
+        top: -35vh;
+    }
+
+    .bottom-nav{
+        height: 65vh;
+        bottom: -65vh;
+    }
+
+    .cube {
+        width: 70vw;
+        height: 70vw;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%,-25%);
+    }
+
+    .taglines h1 {
+        font-size: 30px;
+    }
+
+    .taglines h2 {
+        font-size: 25px;
+    }
+
+    .taglines h4 {
+        font-size: 20px;
+    }
+
+    .container2 h2{
+        font-size: 40px;
+    }
+
+    .triangle-container{
+        border-left: 160px solid transparent;
+        border-right: 160px solid transparent;
+        border-bottom: 160px solid #1c28d1; 
+    }
+
+    .triangle-image{
+        transform: translate(-40%,-38.5%);
+        width: 280px;
+        height: 260px;
+    }
+
+
+}

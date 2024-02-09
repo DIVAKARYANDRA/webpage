@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f0f0f0;
+}
+
+.movieDetailsContainer {
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #5bcbec;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.movieBanner img{
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.movieBanner h2{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.trailer-btn a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.trailer-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+}
+
+.trailer-btn:hover {
+    background-color: #0056b3;
+}
+
+.movie-description {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.movie-description ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.movie-description li{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.movie-description p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.like-btn {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.like-btn:hover {
+    background-color: #218838;
+}
+
+#like-count {
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.cast-members,
+.crew-members {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cast-member,
+.crew-member {
+    margin-right: 10px;
+}
+
+.cast-member img,
+.crew-member img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.cast-member p,
+.crew-member p {
+    font-size: 14px;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.booking {
+    text-align: center;
+}
+
+
+.book-btn a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.book-btn {
+    padding: 15px 30px;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.book-btn:hover {
+    background-color: #c82333;
+}
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="./login.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="container1">
+
+        <div class="hide-btn">
+            <h2>I am Hidden Somewhere <br> Find me</h2>
+            <button>Hint</button>
+        </div>
+
+        <div class="banner">
+            <h1 class="banner-heading">Hover Here!</h1>
+            <h1 class="banner-heading res-banner">Click Here!</h1>
+            <div class="arrow">
+                <i class="ri-arrow-down-fill"></i>
+            </div>
+        </div>
+
+        <div class="icard-wrapper">
+            <div class="icard">
+                <img src="../images/login-images/diva2.png" alt="invisible card image" class="icard-img">
+                <h1 class="icard-heading">Divakar Yandra</h1>
+                <p>I am Front-end Web-developer with a creative mindset.</p>
+                <ul class="icard-icons">
+                    <li><a href="#" class="icard-icon-link"><i class="ri-facebook-box-fill icard-icon"></i></a></li>
+                    <li><a href="#" class="icard-icon-link"><i class="ri-linkedin-box-fill icard-icon"></i></a></li>
+                    <li><a href="#" class="icard-icon-link"><i class="ri-twitter-fill icard-icon"></i></a></li>
+                    <li><a href="#" class="icard-icon-link"><i class="ri-instagram-fill icard-icon"></i></a></li>
+                </ul>
+                <button class="icard-btn">View Profile</button>
+            </div>
+        </div>
+
+        <div class="form-container">
+
+            <div class="header-form">
+                <h1>Welcome<br> To <br>Divakar's Zone!</h1>
+
+                <button type="button">Click me</button>
+            </div>
+     
+                <form class="sign-up-form">
+                    <div class="form-input-container">
+                        <input type="text" class="form-input" id="emailInput" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="form-input-container" id="passContainer">
+                        <input type="password" class="form-input" id="passwordInput" required>
+                        <label>Password</label>
+                    </div>
+                    
+                    <button type="button" onclick="validateAndRedirect()">Login</button>
+                </form>     
+
+            <div class="x-btn">
+                &#10005;
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+    <script src="./login.js"></script>
+    
+</body>
+</html>

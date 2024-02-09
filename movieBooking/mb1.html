@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .languages-nav{
+            background-color: black;
+            padding: 10px 0;
+        }
+
+        .languages-nav ul{
+            list-style: none;
+            text-align: center;
+        }
+
+        .languages-nav li{
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        .languages-nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .languages-nav a:hover,
+        .languages-nav a.active {
+            background-color: #555;
+        }
+
+        .movie-posters{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            
+        }
+
+        .movie-poster {
+            margin: 40px;
+            width: 200px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+                
+        .movie-poster img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        
+        .movie-rating {
+            font-size: 14px;
+            color: #888;
+        }
+
+ 
+    </style>
+
+    <title>Book Your Show</title>
+</head>
+<body>
+
+    <nav class="languages-nav">
+        <ul>
+            <li><a href="#" class="active">All</a></li>
+            <li><a href="#">Telugu</a></li>
+            <li><a href="#">English</a></li>
+            <li><a href="#">Hindi</a></li>
+        </ul>
+    </nav>
+
+    <section class="movie-posters">
+        <div class="movie-poster" data-language="telugu" onclick="location.href='./movieDetails/movie01.html';">
+            <img src="../images/movies/moviePoster1.jpg" alt="Movie poster 01">
+            <div class="movie-details">
+                <h3 class="movie-name">Hanuman</h3>
+                <p class="movie-rating">⭐9.4/10</p>
+            </div>
+        </div>
+
+        <div class="movie-poster" data-language="english" onclick="location.href='./movieDetails/movie05.html';">
+            <img src="../images/movies/moviePoster5.jpg" alt="Movie poster 02">
+            <div class="movie-details">
+                <h3 class="movie-name">Aquaman</h3>
+                <p class="movie-rating">⭐7.7/10</p>
+            </div>
+        </div>
+
+        <div class="movie-poster" data-language="hindi" onclick="location.href='./movieDetails/movie08.html';">
+            <img src="../images/movies/moviePoster8.jpg" alt="Movie poster 03">
+            <div class="movie-details">
+                <h3 class="movie-name">Fighter</h3>
+                <p class="movie-rating">⭐8.6/10</p>
+            </div>
+        </div>
+
+        <div class="movie-poster" data-language="telugu" onclick="location.href='./movieDetails/movie02.html';">
+            <img src="../images/movies/moviePoster2.jpg" alt="Movie poster 04">
+            <div class="movie-details">
+                <h3 class="movie-name">Salaar</h3>
+                <p class="movie-rating">⭐9.8/10</p>
+            </div>
+        </div>
+
+        <div class="movie-poster" data-language="english" onclick="location.href='./movieDetails/movie06.html';">
+            <img src="../images/movies/moviePoster6.jpg" alt="Movie poster 05">
+            <div class="movie-details">
+                <h3 class="movie-name">SPIDERMAN<br>across the spider verse</h3>
+                <p class="movie-rating">⭐9.3/10</p>
+            </div>
+        </div>
+
+        <div class="movie-poster" data-language="hindi" onclick="location.href='./movieDetails/movie09.html';">
+            <img src="../images/movies/moviePoster9.jpeg" alt="Movie poster 06">
+            <div class="movie-details">
+                <h3 class="movie-name">12th Fail</h3>
+                <p class="movie-rating">⭐9.6/10</p>
+            </div>
+        </div>
+
+        <div class="movie-poster" data-language="telugu" onclick="location.href='./movieDetails/movie03.html';">
+            <img src="../images/movies/moviePoster3.jpg" alt="Movie poster 07">
+            <div class="movie-details">
+                <h3 class="movie-name">Captian Miller</h3>
+                <p class="movie-rating">⭐7.7/10</p>
+            </div>
+        </div>
+
+        <div class="movie-poster" data-language="english" onclick="location.href='./movieDetails/movie07.html';">
+            <img src="../images/movies/moviePoster7.jpg" alt="Movie poster 08">
+            <div class="movie-details">
+                <h3 class="movie-name">Titanic</h3>
+                <p class="movie-rating">⭐9.3/10</p>
+            </div>
+        </div>
+
+        <div class="movie-poster" data-language="hindi" onclick="location.href='./movieDetails/movie10.html';">
+            <img src="../images/movies/moviePoster10.jpg" alt="Movie poster 09">
+            <div class="movie-details">
+                <h3 class="movie-name">Mangalavaar</h3>
+                <p class="movie-rating">⭐9.2/10</p>
+            </div>
+        </div>
+
+        <div class="movie-poster" data-language="telugu" onclick="location.href='./movieDetails/movie04.html';">
+            <img src="../images/movies/moviePoster4.jpg" alt="Movie poster 10">
+            <div class="movie-details">
+                <h3 class="movie-name">Eagle</h3>
+                <p class="movie-rating">⭐- /10</p>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        const languageLinks = document.querySelectorAll('.languages-nav a');
+
+        languageLinks.forEach(link => {
+   
+        link.addEventListener('click', () => {
+        languageLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+
+                const selectedLanguage = link.textContent.toLowerCase();
+
+                const moviePosters = document.querySelectorAll('.movie-poster');
+
+                moviePosters.forEach(poster => {
+                    const movieLanguage = poster.dataset.language.toLowerCase();
+                    if(selectedLanguage === 'all' || selectedLanguage === movieLanguage){
+                        poster.style.display = 'block';
+                    }else{
+                        poster.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

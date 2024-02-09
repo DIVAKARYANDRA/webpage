@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Divakar Page</title>
+  </head>
+  <body>
+
+
+    <div class="main-container">
+
+        <div class="container">
+            <div class="split left">
+              <h1>Simple Website</h1>
+              <a href="#" class="btn">Visit Now</a>
+              
+            </div>
+            <div class="split right">
+              <h1>My Protfolio</h1>
+              <a href="./login/login.html" class="btn">Discover now</a>
+              
+            </div>
+          </div>
+    
+    
+        <a href="#" class="res-btn">website</a>
+        <a href="./login/login.html" class="res-btn">protfolio</a>
+    </div>
+   
+
+
+
+    
+
+    <script>
+    const left = document.querySelector('.left')
+    const right = document.querySelector('.right')
+    const container = document.querySelector('.container')
+
+    left.addEventListener('mouseenter', () => container.classList.add('hover-left'))
+    left.addEventListener('mouseleave', () => container.classList.remove('hover-left'))
+
+    right.addEventListener('mouseenter', () => container.classList.add('hover-right'))
+    right.addEventListener('mouseleave', () => container.classList.remove('hover-right'))
+    </script>
+
+    
+  </body>
+</html>

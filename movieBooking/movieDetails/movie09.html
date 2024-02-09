@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./movies.css">
+    <title>Movie Details</title>
+</head>
+<body>
+
+    <div class="movieDetailsContainer">
+
+        <div class="movieBanner">
+            <img src="../../images/movies/movieBanner9.jpg" alt="Movie Banner 06">
+            <h2>12th FAIL</h2>
+            <button class="trailer-btn"><a href="https://youtu.be/WeMJo701mvQ?si=4dy3lSgaYG6SP7bY">▶Trailer</a></button>
+        </div>
+
+        <div class="movie-description">
+            <ul>
+                <li>2h 27m</li>
+                <li>Drama</li>
+                <li>27 oct 2023</li>
+            </ul>
+            <p>Based on Anurag pathak's bestselling novel of the same name , 12th fail depicts the true story of an IPS Manoj Kumar Sharma.</p>
+            <button id="like-button" class="like-btn" onclick="toggleLike()">👍</button>
+            <span id="like-count">132k</span>
+        </div>
+
+        <h2>Cast</h2>
+
+        <div class="cast-members">
+            
+            <div class="cast-member">
+                <img src="../../images/movies/movie09cast00.jpg" alt="Actor 1">
+                <p>Hero</p>
+            </div>
+
+            <div class="cast-member">
+                <img src="../../images/movies/movie09cast01.jpg" alt="Actor 1">
+                <p>Actor</p>
+            </div>
+
+        </div>
+
+        <h2>Crew</h2>
+
+        <div class="crew-members">
+            <div class="crew-member">
+                <img src="../../images/movies/movie09crew00.jpg" alt="crew 1">
+                <p>Director</p>
+            </div>
+
+            <div class="crew-member">
+                <img src="../../images/movies/movie09crew01.jpg" alt="crew 2">
+                <p>Musician</p>
+            </div>
+            
+        </div>
+
+
+        <div class="booking">
+            <button class="book-btn"><a href="../selectSeat.html">Book Tickets</a></button>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        let likeCount = 132000;
+        let isLiked = false;
+
+        function toggleLike() {
+            if (isLiked) {
+                likeCount--;
+            } else {
+                likeCount++;
+            }
+            isLiked = !isLiked;
+            updateLikeCount();
+        }
+
+        function updateLikeCount() {
+            document.getElementById('like-count').innerText = likeCount;
+        }
+
+    </script>
+
+    
+</body>
+</html>

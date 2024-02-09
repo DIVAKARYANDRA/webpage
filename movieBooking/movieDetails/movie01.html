@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./movies.css">
+    <title>Movie Details</title>
+</head>
+<body>
+
+    <div class="movieDetailsContainer">
+
+        <div class="movieBanner">
+            <img src="../../images/movies/movieBanner1.jpeg" alt="Movie Banner 01">
+            <h2>HANUMAN</h2>
+            <button class="trailer-btn"><a href="https://youtu.be/Oqvly3MvlXA?si=_qy5P0U3qGY_D7Bh">▶Trailer</a></button>
+        </div>
+
+        <div class="movie-description">
+            <ul>
+                <li>2h 38m</li>
+                <li>Action, Adventure, Fantasy</li>
+                <li>12 jan 2024</li>
+            </ul>
+            <p>Hanumanthu gets the owers of Hanuman in a distant village and fights for Anjanadri.</p>
+
+            <button id="like-button" class="like-btn" onclick="toggleLike()">👍</button>
+            <span id="like-count">208.9k</span>
+        </div>
+
+        <h2>Cast</h2>
+
+        <div class="cast-members">
+            
+            <div class="cast-member">
+                <img src="../../images/movies/movie01cast00.jpg" alt="Actor 1">
+                <p>Hero</p>
+            </div>
+
+            <div class="cast-member">
+                <img src="../../images/movies/movie01cast01.jpg" alt="Actor 1">
+                <p>Heroine</p>
+            </div>
+
+            <div class="cast-member">
+                <img src="../../images/movies/movie01cast02.jpg" alt="Actor 2">
+                <p>villan</p>
+            </div>
+
+            <div class="cast-member">
+                <img src="../../images/movies/movie01cast03.jpg" alt="Actor 3">
+                <p>Comedian</p>
+            </div>
+
+            <div class="cast-member">
+                <img src="../../images/movies/movie01cast04.jpg" alt="Actor 4">
+                <p>Comedian</p>
+            </div>
+
+            <div class="cast-member">
+                <img src="../../images/movies/movie01cast05.jpg" alt="Actor 5">
+                <p>Supoorter</p>
+            </div>
+            
+        </div>
+
+        <h2>Crew</h2>
+
+        <div class="crew-members">
+            <div class="crew-member">
+                <img src="../../images/movies/movie01crew00.jpg" alt="crew 1">
+                <p>Director</p>
+            </div>
+
+            <div class="crew-member">
+                <img src="../../images/movies/movie01crew01.jpg" alt="crew 2">
+                <p>Producer</p>
+            </div>
+            
+        </div>
+
+
+        <div class="booking">
+            <button class="book-btn"><a href="../selectSeat.html">Book Tickets</a></button>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        let likeCount = 208900;
+        let isLiked = false;
+
+        function toggleLike() {
+            if (isLiked) {
+                likeCount--;
+            } else {
+                likeCount++;
+            }
+            isLiked = !isLiked;
+            updateLikeCount();
+        }
+
+        function updateLikeCount() {
+            document.getElementById('like-count').innerText = likeCount;
+        }
+
+    </script>
+
+    
+</body>
+</html>

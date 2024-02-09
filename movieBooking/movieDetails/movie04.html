@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./movies.css">
+    <title>Movie Details</title>
+</head>
+<body>
+
+    <div class="movieDetailsContainer">
+
+        <div class="movieBanner">
+            <img src="../../images/movies/movieBanner4.jpg" alt="Movie Banner 03">
+            <h2>EAGLE</h2>
+            <button class="trailer-btn"><a href="https://youtu.be/2sX0lElZKQE?si=BbfccfoN-SOH9vpQ">▶Trailer</a></button>
+        </div>
+
+        <div class="movie-description">
+            <ul>
+                <li>2h 39m</li>
+                <li>Action, Thriller</li>
+                <li>09 Feb 2024</li>
+            </ul>
+            <p>A journalist uncovers the story of a ruthless assassin when she investigates a government cover up.</p>
+            <button id="like-button" class="like-btn" onclick="toggleLike()">👍</button>
+            <span id="like-count">50k</span>
+        </div>
+
+        <h2>Cast</h2>
+
+        <div class="cast-members">
+            
+            <div class="cast-member">
+                <img src="../../images/movies/movie04cast00.jpg" alt="Actor 1">
+                <p>Hero</p>
+            </div>
+
+            <div class="cast-member">
+                <img src="../../images/movies/movie04cast01.jpg" alt="Actor 1">
+                <p>Heroine</p>
+            </div>
+
+            <div class="cast-member">
+                <img src="../../images/movies/movie04cast02.jpg" alt="Actor 2">
+                <p>Actor</p>
+            </div>
+
+            <div class="cast-member">
+                <img src="../../images/movies/movie04cast03.jpg" alt="Actor 3">
+                <p>Comedian</p>
+            </div>
+            
+        </div>
+
+        <h2>Crew</h2>
+
+        <div class="crew-members">
+            <div class="crew-member">
+                <img src="../../images/movies/movie04crew00.jpg" alt="crew 1">
+                <p>Director</p>
+            </div>
+
+            <div class="crew-member">
+                <img src="../../images/movies/movie04crew01.jpg" alt="crew 2">
+                <p>Producer</p>
+            </div>
+            
+        </div>
+
+
+        <div class="booking">
+            <button class="book-btn"><a href="../selectSeat.html">Book Tickets</a></button>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        let likeCount = 50000;
+        let isLiked = false;
+
+        function toggleLike() {
+            if (isLiked) {
+                likeCount--;
+            } else {
+                likeCount++;
+            }
+            isLiked = !isLiked;
+            updateLikeCount();
+        }
+
+        function updateLikeCount() {
+            document.getElementById('like-count').innerText = likeCount;
+        }
+
+    </script>
+
+    
+</body>
+</html>
