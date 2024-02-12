@@ -1,0 +1,118 @@
+    body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background:  url(../images/valentine/bg.jpg) center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    }
+
+    .container {
+        text-align: center;
+        background: linear-gradient(rgba(231, 88, 88, 0.8),rgba(243, 87, 87, 0.6)),  url(../images/valentine/bg1.png) center no-repeat;
+        background-size: cover;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1{
+        font-size: 30px;
+        color: darkturquoise;
+    }
+
+    .input-container {
+        margin-top: 20px;
+        color: li;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 20px;
+        color: lightgreen;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        background-color: lightgrey;
+        font-size: 15px;
+    }
+
+    button {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .result-container {
+        display: none;
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)),  url(../images/valentine/img.jpg) center no-repeat;
+        background-size: cover;
+        padding: 20px 0;
+        color: #fff;
+    }
+
+    .heart {
+        display: none;
+        width: 100px;
+        height: 90px;
+        position: relative;
+        animation: pulse 1s infinite alternate ease-in-out;
+        margin-top: 20px;
+
+    }
+
+    .heart::before,
+    .heart::after {
+        position: absolute;
+        content: "";
+        left: 50px;
+        top: 0;
+        width: 50px;
+        height: 80px;
+        background-color: red;
+        border-radius: 50px 50px 0 0;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+    }
+
+    .heart::after {
+        left: 0;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+    }
+
+    .text {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        z-index: 1; 
+    }
+
+    
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }

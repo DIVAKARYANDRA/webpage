@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body{
@@ -8,12 +10,9 @@ body{
     justify-content: center; 
     flex-direction: column;
     overflow-x: hidden;
-     margin: 0;
+    margin: 0;
     background-color: black;
-
-
 }
-
 
 .loading-container{
     transition: filter 2s ease;
@@ -31,7 +30,7 @@ body{
 
 .container1{
     display: flex;
-    width: 90vw;
+    width: 100vw;
 }
 
 .panel{
@@ -51,21 +50,6 @@ body{
     flex: 5;
 }
 
-@media(max-width: 480px){
-
-
-    /* Expanding cards */
-
-    .container1{
-        width: 100vw;
-    }
-
-    .panel:nth-of-type(4),
-    .panel:nth-of-type(4){
-        display: none;
-    }
-    
-}
 
 
 /* Progress bar */
@@ -156,6 +140,7 @@ body{
     height: 20px;
     margin-top: 30px;
     margin-left: 20px;
+    
  }
 
  .search .input{
@@ -209,7 +194,7 @@ body{
     margin: 10px;
     border-radius: 10px;
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
-    transform: translateX(200%);
+    transform: translateX(-200%);
     transition: transform 0.4s ease;
 }
 
@@ -218,9 +203,9 @@ body{
     height: 200px;
 }
 
-.box:nth-of-type(even){
+/* .box:nth-of-type(even){
     transform: translateX(-200%);
-}
+} */
 
 .box.show{
     transform: translateX(0);
@@ -405,6 +390,7 @@ textarea{
     align-items: center;
     justify-content: center;
     color: #11addd;
+    margin-top: 20px;
 }
 
 
@@ -484,17 +470,6 @@ textarea{
     transition-duration: 0s;
 }
 
-@media(min-width:600px){
-
-    .hoverboard-container{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        max-width: 600px;
-    }
-    
-}
 
 /* blessing-magic */
 
@@ -598,14 +573,15 @@ textarea{
     box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
     width: 400px;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .quiz-header{
-    padding: 4rem;
+    padding: 20px;
 }
 
 .h2element{
-    padding: 1rem;
+    padding: 10px;
     text-align: center;
     margin: 0;
 }
@@ -643,3 +619,62 @@ textarea{
     outline: none;
     background-color: #5e3370;
 }
+
+
+@media(min-width:600px){
+
+    .hoverboard-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 600px;
+    }
+
+    
+    
+}
+
+
+@media(max-width: 450px){
+
+
+    /* Expanding cards */
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display: none;
+    }
+
+    .circle:nth-of-type(4),
+    .circle:nth-of-type(5){
+        display: none;
+    }
+
+    .box{
+        width: 300px;
+        height: 150px;
+    }
+
+    .box img{
+        width: 300px;
+        height: 150px;
+    }
+
+    .container6 {
+        display: none;
+    }
+
+    .container7{
+        margin-top: 20px;
+    }
+
+    .quiz-container{
+        width: 300px;
+    }
+    
+    .nav-container{
+        display: none;
+    }
+}
+

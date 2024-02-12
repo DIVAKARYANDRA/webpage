@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 .hamburger-menu{
     width: 35px;
     height: 30px;
@@ -780,6 +784,7 @@
     justify-content: center;
 }
 
+
 .websites,
 .games{
     background-color: #173514;
@@ -788,6 +793,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    border-radius: 10px;
   
 }
 
@@ -799,13 +805,34 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
+
 
 .website a,
 .game a{
     text-decoration: none;
     color: black;
 }
+
+.websites .website:hover,
+.games .game:hover {
+    border-color: #FFC107;
+}
+
+.websites .website:hover {
+    background-color: #77f03f;
+}
+
+.games .game:hover {
+    background-color: #f44336;
+}
+
+
 
 
 /* media-screens */
