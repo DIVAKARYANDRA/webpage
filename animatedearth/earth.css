@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+.wrapper{
+    width: 500px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.wrapper::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    border-radius: 50%;
+    box-shadow: -10px -10px 20px #444, 30px 10px 40px #444, inset 10px 0 20px #000, inset -10px 0 20px #c9c3c3;
+}
+
+.earth{
+    width: 100%;
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    animation: earthAnim 20s infinite linear;
+}
+
+.day{
+    background: url(../images/earth/earth-day.jpg);
+    background-size: cover;
+}
+
+.night{
+    background: url(../images/earth/earth-night.jpg);
+    background-size: cover;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+@keyframes earthAnim{
+    0%{
+        background-position: 0 center;
+    }
+
+    100%{
+        background-position: 500px center;
+    }
+}
